@@ -1,25 +1,39 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import PropTypes from "prop-types";
 import { useForm } from "react-hook-form";
-import { registerSchema } from "../ValidateForm/schemaForm";
-function AuthForm({ title, onSubmit, buttonText }) {
+import { registerSchema, loginSchema } from "../ValidateForm/schemaForm";
+import instance from "../axios";
+import { useNavigate } from "react-router-dom";
+function AuthForm({ isRegister }) {
+  const navigate = useNavigate();
+  const handleData = async (data) => {
+    try {
+      if (isRegister) {
+        const res = await instance.post(`/register`, data);
+        navigate("/login");
+        return res;
+      } else {
+        const res = await instance.post(`/login`, data);
+        localStorage.setItem("user", JSON.stringify(res.data));
+        navigate("/");
+        return res;
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
   const {
     register,
     formState: { errors },
     handleSubmit,
-  } = useForm({ resolver: zodResolver(registerSchema) });
-  //   const navigate = useNavigate();
-  const onSendData = async (data) => {
-    const response = await onSubmit(data);
-    console.log(response);
-    // if (response.data == "ok") {
-    //   navigate("/");
-    // }
-  };
+  } = useForm({
+    resolver: zodResolver(isRegister ? registerSchema : loginSchema),
+  });
+
   return (
     <div>
-      <form onSubmit={handleSubmit(onSendData)}>
-        <h1>{title}</h1>
+      <form onSubmit={handleSubmit(handleData)}>
+        <h1>{isRegister ? "Register" : "Login"}</h1>
         <div className="mb-3">
           <label htmlFor="email" className="form-label">
             Email
@@ -48,10 +62,26 @@ function AuthForm({ title, onSubmit, buttonText }) {
             <p className="text-danger">{errors.password?.message}</p>
           )}
         </div>
+        {isRegister ? (
+          <div className="mb-3">
+            <label htmlFor="password" className="form-label">
+              Confirm Password
+            </label>
+            <input
+              type="password"
+              className="form-control"
+              id="confirm_password"
+              {...register("confirm_password")}
+            />
+            {errors.confirm_password?.message && (
+              <p className="text-danger">{errors.confirm_password?.message}</p>
+            )}
+          </div>
+        ) : null}
 
         <div className="mb-3">
           <button className="btn btn-primary w-100" type="submit">
-            {buttonText}
+            {isRegister ? "Register" : "Login"}
           </button>
         </div>
       </form>
@@ -59,9 +89,7 @@ function AuthForm({ title, onSubmit, buttonText }) {
   );
 }
 AuthForm.propTypes = {
-  title: PropTypes.string.isRequired,
-  onSubmit: PropTypes.func.isRequired,
-  buttonText: PropTypes.string.isRequired,
+  isRegister: PropTypes.bool.isRequired,
 };
 
 export default AuthForm;

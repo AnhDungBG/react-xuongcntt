@@ -21,13 +21,13 @@ function ProductCard({ data }) {
           <p className="card-text">${data.price}</p>
           <p className="card-text">{data.description}</p>
         </div>
-        <Button type="secondary"> Button</Button>
+        <Button type="primary"> Button</Button>
       </div>
     </div>
   );
 }
 
 ProductCard.propTypes = {
-  data: PropTypes.node.isRequired,
+  data: PropTypes.string.isRequired,
 };
 export default ProductCard;

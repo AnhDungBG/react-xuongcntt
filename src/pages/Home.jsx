@@ -12,7 +12,7 @@ function Home({ data }) {
               style={{ height: "500px" }}
               key={product.id}
             >
-              <ProductCard data={product} />
+              <ProductCard data={product}  />
             </div>
           ))
         ) : (

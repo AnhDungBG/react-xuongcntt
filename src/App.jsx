@@ -1,19 +1,19 @@
 import { useEffect, useState } from "react";
-import "./App.scss";
-import Header from "./components/common/Header";
-import Footer from "./components/common/Footer";
 import { Navigate, Route, Routes, useNavigate } from "react-router-dom";
+import "./App.scss";
 import instance from "./axios";
+import Footer from "./components/common/Footer";
+import Header from "./components/common/Header";
 
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Login from "./pages/Login";
-import Notfound from "./pages/Notfound";
-import Dashboard from "./pages/admin/Dashboard";
-import Products from "./pages/Products";
-import ProductForm from "./pages/admin/Product/ProductForm";
 import { getProducts } from "./axios";
-import Register from "./pages/Register";
+import AuthForm from "./components/AuthForm";
+import About from "./pages/About";
+import Home from "./pages/Home";
+import Notfound from "./pages/Notfound";
+import Products from "./pages/Products";
+import Dashboard from "./pages/admin/Dashboard";
+import ProductForm from "./pages/admin/Product/ProductForm";
+import PrivateRoute from "./components/PrivateRouter";
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -59,24 +59,27 @@ function App() {
           <Route path="/" element={<Home data={products} />} />
           <Route path="/home" element={<Navigate to="/" />} />
           <Route path="/about" element={<About />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
+
+          <Route path="/login" element={<AuthForm />} />
+          <Route path="/register" element={<AuthForm isRegister />} />
           <Route path="*" element={<Notfound />} />
-          <Route path="/product/:id" element={<Products />} />
+          <Route path="/products/:id" element={<Products />} />
 
           {/* admin */}
-          <Route
-            path="/admin"
-            element={<Dashboard remove={remove} data={products} />}
-          />
-          <Route
-            path="/admin/product-form"
-            element={<ProductForm onChange={handleSubmit} />}
-          />
-          <Route
-            path="/admin/product-form/:id"
-            element={<ProductForm onChange={handleSubmit} />}
-          />
+          <Route path="/admin" element={<PrivateRoute />}>
+            <Route
+              path="/admin"
+              element={<Dashboard remove={remove} data={products} />}
+            />
+            <Route
+              path="/admin/product-form"
+              element={<ProductForm onChange={handleSubmit} />}
+            />
+            <Route
+              path="/admin/product-form/:id"
+              element={<ProductForm onChange={handleSubmit} />}
+            />
+          </Route>
         </Routes>
       </main>
       <Footer />

@@ -465,22 +465,10 @@
       ]
     },
     {
-      "title": "nnn",
-      "price": "akakkak",
-      "brand": "akaka",
+      "title": "hihihi",
+      "price": 200,
+      "description": "",
       "id": 31
-    },
-    {
-      "title": "anan",
-      "price": "snns",
-      "brand": "kkk",
-      "id": 32
-    },
-    {
-      "title": "tn sp moi",
-      "price": 123,
-      "description": "new",
-      "id": 33
     }
   ],
   "users": [
@@ -528,6 +516,28 @@
       "email": "aabbb@gmail.com",
       "password": "$2a$10$YAK0WeWfelnyTdORe/wq2e.NmGkckIcVjzNtPqOgP/YwyxaizLPVO",
       "id": 9
+    },
+    {
+      "email": "aa1@gmail.com",
+      "password": "$2a$10$8LZKfHe9r6nTj/hTohoW6OIXNKlFydc3dqVOrRmHL2JFp8zfdq0Gm",
+      "id": 10
+    },
+    {
+      "email": "aaaa@gmail.com",
+      "password": "$2a$10$PLEzfTkgT4gjfNmsPfpLp.OEHthvxOGeEEiAyW241IUeoS992Nyua",
+      "id": 11
+    },
+    {
+      "email": "ananan@gmail.com",
+      "password": "$2a$10$IaaJaC1rZ1lxr0OS9mOD..nuP7LZAgH.QMVUg1lAP0F5ZmpFwFfmy",
+      "confirm_password": "anhdung",
+      "id": 12
+    },
+    {
+      "email": "a1234@gmail.com",
+      "password": "$2a$10$Xpmj7O4KMugV9kUN2WfTaeacvyNrJERVNJGzjOV3lc5J/ErIqLRmG",
+      "confirm_password": "anhdung",
+      "id": 13
     }
   ]
 }

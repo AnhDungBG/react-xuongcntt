@@ -1,6 +1,13 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Header() {
+  const navigate = useNavigate();
+  const email = JSON.parse(localStorage.getItem("user"));
+  console.log(email);
+  const logout = () => {
+    localStorage.removeItem("user");
+    navigate("/login");
+  };
   return (
     <div className="row p-4">
       <div className="col-6">
@@ -14,9 +21,20 @@ function Header() {
           <li>
             <Link to="/product">Products</Link>
           </li>
-          <li>
-            <Link to="/login">Login</Link>
-          </li>
+          {email ? (
+            <button onClick={logout}>Logout</button>
+          ) : (
+            <li>
+              <Link to="/login">Login</Link>
+            </li>
+          )}
+          {email ? (
+            ""
+          ) : (
+            <li>
+              <Link to="/Register">Register</Link>
+            </li>
+          )}
         </ul>
       </div>
       <div className="col-6"></div>
