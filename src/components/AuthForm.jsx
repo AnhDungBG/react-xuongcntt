@@ -18,8 +18,8 @@ function AuthForm({ isRegister }) {
         navigate("/");
         return res;
       }
-    } catch (error) {
-      console.log(error);
+    } catch ({ response }) {
+      alert(response.data);
     }
   };
   const {

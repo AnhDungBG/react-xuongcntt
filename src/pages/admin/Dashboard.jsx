@@ -1,15 +1,64 @@
-import { Link } from "react-router-dom";
-import PropTypes from "prop-types";
-const Dashboard = ({ data, remove }) => {
-  const removeProducts = (id) => {
-    remove(id);
+import { useContext, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import Context from "../../store/Context";
+import useProductActions from "../../store/MiddleWares";
+import style from "../admin/Dashboard.module.scss";
+import ProductCardAdmin from "./Product/ProductCardAdmin";
+const Dashboard = () => {
+  const navigate = useNavigate();
+  const { state } = useContext(Context);
+  const { products } = state;
+  const { deleteProduct } = useProductActions();
+  const handleDelete = async (id) => {
+    await deleteProduct(id);
+    navigate("/admin");
   };
+
+  const [searchValue, setSearchValue] = useState("");
+  const [filterValue, setFilterValue] = useState("");
+  const handleChangeValue = (e) => {
+    setSearchValue(e.target.value);
+  };
+  const handleFilterProduct = (e) => {
+    setFilterValue(e.target.value);
+  };
+  const getProductList = () => {
+    return products.filter(
+      (product) =>
+        product?.title?.toUpperCase()?.includes(searchValue?.toUpperCase()) &&
+        (filterValue === "" ||
+          product?.brand?.toUpperCase()?.includes(filterValue?.toUpperCase()))
+    );
+  };
+
+  const productList = getProductList();
+
   return (
     <div>
       <h1>Hello Admin</h1>
       <Link to="/admin/product-form" className="btn btn-primary">
         Add new product
       </Link>
+      <div className={`${style.filter__products}`}>
+        <div className="search__bar">
+          <input
+            type="text"
+            placeholder="Search product by title...."
+            onChange={handleChangeValue}
+            value={searchValue}
+          />
+        </div>
+        <div>
+          <select onChange={handleFilterProduct} name="filter">
+            <option value="">---Bộ lọc----</option>
+            <option value="iphone">Iphone</option>
+            <option value="samsung">Samsung</option>
+            <option value="xiaomi">Xiaomi</option>
+            <option value="sony">Sony</option>
+          </select>
+        </div>
+      </div>
+
       <table className="table table-bordered table-striped text-center">
         <thead>
           <tr>
@@ -21,37 +70,14 @@ const Dashboard = ({ data, remove }) => {
           </tr>
         </thead>
         <tbody>
-          {data.map((product) => (
+          {productList.map((product) => (
             <tr key={product.id}>
-              <td>{product.id}</td>
-              <td>{product.title}</td>
-              <td>{product.price}</td>
-              <td>{product.description || "Updating"}</td>
-              <td>
-                <button
-                  className="btn btn-danger"
-                  onClick={() => {
-                    removeProducts(product.id);
-                  }}
-                >
-                  Delete
-                </button>
-                <Link
-                  to={`/admin/product-form/${product.id}`}
-                  className="btn btn-primary"
-                >
-                  Edit
-                </Link>
-              </td>
+              <ProductCardAdmin product={product} handleDelete={handleDelete} />
             </tr>
           ))}
         </tbody>
       </table>
     </div>
   );
-};
-Dashboard.propTypes = {
-  data: PropTypes.array.isRequired,
-  remove: PropTypes.func.isRequired,
 };
 export default Dashboard;

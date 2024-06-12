@@ -8,7 +8,6 @@ function Products() {
     (async () => {
       try {
         const { data } = await instance.get(`/products/${id}`);
-        console.log(data);
         setProduct(data);
       } catch (error) {
         console.log(error);

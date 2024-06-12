@@ -1,12 +1,16 @@
-import { useParams } from "react-router-dom";
-import PropTypes from "prop-types";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useContext, useEffect } from "react";
 import { useForm } from "react-hook-form";
-import instance from "../../../axios";
-import { useEffect } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import { productSchema } from "../../../ValidateForm/schemaForm";
-function ProductForm({ onChange }) {
+import instance from "../../../axios";
+import Context from "../../../store/Context";
+import useProductActions from "./../../../store/MiddleWares";
+function ProductForm() {
+  const navigate = useNavigate();
   const { id } = useParams();
+  const { dispatch } = useContext(Context);
+  const { editProduct, addProduct } = useProductActions(dispatch);
   const {
     register,
     formState: { errors },
@@ -27,8 +31,14 @@ function ProductForm({ onChange }) {
       fetchProductEdit();
     }
   }, [id, reset]);
-  const onSubmit = (data) => {
-    onChange({ ...data, id });
+  const onSubmit = async (data) => {
+    if (id) {
+      await editProduct({ data, id });
+      navigate("/admin");
+    } else {
+      await addProduct(data);
+      navigate("/admin");
+    }
   };
   return (
     <>
@@ -85,8 +95,5 @@ function ProductForm({ onChange }) {
     </>
   );
 }
-ProductForm.propTypes = {
-  onChange: PropTypes.func.isRequired,
-};
 
 export default ProductForm;

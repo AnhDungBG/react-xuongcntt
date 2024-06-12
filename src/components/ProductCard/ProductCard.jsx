@@ -4,24 +4,25 @@ import PropTypes from "prop-types";
 import Button from "../Button/Button";
 function ProductCard({ data }) {
   return (
-    <div className={s.ProductCard}>
-      <div className="card item" style={{ width: "18rem", height: "100%" }}>
-        <Link to={`/products/${data.id}`}>
-          <img
-            src={data.thumbnail}
-            alt=""
-            className="card-img-top"
-            style={{ height: "10rem", objectFit: "cover" }}
-          />
+    <div className={`card ${s.ProductCard}`}>
+      <Link to={`/products/${data.id}`} className={s.imageLink}>
+        <img
+          src={data.thumbnail}
+          alt={data.title}
+          className="card-img-top"
+          style={{ height: "10rem", objectFit: "cover" }}
+        />
+      </Link>
+      <div className="card-body">
+        <Link
+          to={`/products/${data.id}`}
+          className="text-decoration-none text-dark"
+        >
+          <h5 className="card-title">{data.title}</h5>
         </Link>
-        <div className="card-body">
-          <Link to={`/products/${data.id}`}>
-            <h2>{data.title}</h2>
-          </Link>
-          <p className="card-text">${data.price}</p>
-          <p className="card-text">{data.description}</p>
-        </div>
-        <Button type="primary"> Button</Button>
+        <p className="card-text text-primary">${data.price}</p>
+        <p className={`card-text ${s.description}`}>{data.description}</p>
+        <Button type="primary">Button</Button>
       </div>
     </div>
   );

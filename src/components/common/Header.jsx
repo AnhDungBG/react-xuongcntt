@@ -3,7 +3,6 @@ import { Link, useNavigate } from "react-router-dom";
 function Header() {
   const navigate = useNavigate();
   const email = JSON.parse(localStorage.getItem("user"));
-  console.log(email);
   const logout = () => {
     localStorage.removeItem("user");
     navigate("/login");

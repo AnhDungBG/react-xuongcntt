@@ -1,18 +1,21 @@
-import PropTypes from "prop-types";
 import ProductCard from "../components/ProductCard/ProductCard";
-function Home({ data }) {
+import { useContext } from "react";
+import Context from "../store/Context";
+function Home() {
+  const { state } = useContext(Context);
+  const { products } = state;
   return (
     <div className="container w-100">
       <h1>List Products</h1>
       <div className="row w-100">
-        {data && data.length > 0 ? (
-          data.map((product) => (
+        {products && products.length > 0 ? (
+          products.map((product) => (
             <div
               className="col-12 col-sm-6 col-lg-3"
               style={{ height: "500px" }}
               key={product.id}
             >
-              <ProductCard data={product}  />
+              <ProductCard data={product} />
             </div>
           ))
         ) : (
@@ -22,8 +25,5 @@ function Home({ data }) {
     </div>
   );
 }
-Home.propTypes = {
-  data: PropTypes.array.isRequired,
-};
 
 export default Home;
