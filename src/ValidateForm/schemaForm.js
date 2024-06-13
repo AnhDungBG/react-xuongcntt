@@ -7,6 +7,8 @@ const productSchema = z.object({
 });
 const registerSchema = z
     .object({
+        first_name: z.string().min(1),
+        last_name: z.string().min(1),
         email: z.string().email(),
         password: z.string().min(6, "enter more 6 "),
         confirm_password: z.string()
@@ -20,6 +22,5 @@ const loginSchema = z
     .object({
         email: z.string().email(),
         password: z.string(),
-
     });
 export { loginSchema, registerSchema, productSchema };

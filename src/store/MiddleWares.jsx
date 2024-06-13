@@ -31,7 +31,6 @@ const useProductActions = (dispatch) => {
   // delete product
   const deleteProduct = useCallback(
     async (id) => {
-      console.log(id);
       try {
         await instance.delete(`products/${id}`);
         dispatch({ type: "DELETE_PRODUCT", payload: id });

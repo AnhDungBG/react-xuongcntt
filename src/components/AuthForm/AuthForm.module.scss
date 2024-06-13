@@ -1,0 +1,151 @@
+$color_1: #fff;
+$color_2: #00bfff;
+$color_3: rgba(255, 255, 255, 0.7);
+$color_4: rgba(255, 255, 255, 0.5);
+$background-color_1: #1a1a1a;
+$background-color_2: #00bfff;
+$background-color_3: #333;
+$background-color_4: #00bfff96;
+
+@keyframes pulse {
+	from {
+		transform: scale(0.9);
+		opacity: 1;
+	}
+	to {
+		transform: scale(1.8);
+		opacity: 0;
+	}
+}
+.form {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	max-width: 350px;
+	padding: 20px;
+	border-radius: 20px;
+	position: relative;
+	background-color: $background-color_1;
+	color: $color_1;
+	border: 1px solid #333;
+	label {
+		position: relative;
+		.input {
+			background-color: $background-color_3;
+			color: $color_1;
+			width: 100%;
+			padding: 20px 05px 05px 10px;
+			outline: 0;
+			border: 1px solid rgba(105, 105, 105, 0.397);
+			border-radius: 10px;
+			+ {
+				span {
+					color: $color_4;
+					position: absolute;
+					left: 10px;
+					top: 0px;
+					font-size: 0.9em;
+					cursor: text;
+					transition: 0.3s ease;
+				}
+			}
+			&:placeholder-shown {
+				+ {
+					span {
+						top: 12.5px;
+						font-size: 0.9em;
+					}
+				}
+			}
+			&:focus {
+				+ {
+					span {
+						color: $color_2;
+						top: 0px;
+						font-size: 0.7em;
+						font-weight: 600;
+					}
+				}
+			}
+			&:valid {
+				+ {
+					span {
+						color: $color_2;
+						top: 0px;
+						font-size: 0.7em;
+						font-weight: 600;
+					}
+				}
+			}
+		}
+	}
+}
+.title {
+	font-size: 28px;
+	font-weight: 600;
+	letter-spacing: -1px;
+	position: relative;
+	display: flex;
+	align-items: center;
+	padding-left: 30px;
+	color: $color_2;
+	&::before {
+		width: 18px;
+		height: 18px;
+		position: absolute;
+		content: "";
+		height: 16px;
+		width: 16px;
+		border-radius: 50%;
+		left: 0px;
+		background-color: $background-color_2;
+	}
+	&::after {
+		width: 18px;
+		height: 18px;
+		animation: pulse 1s linear infinite;
+		position: absolute;
+		content: "";
+		height: 16px;
+		width: 16px;
+		border-radius: 50%;
+		left: 0px;
+		background-color: $background-color_2;
+	}
+}
+.message {
+	font-size: 14.5px;
+	color: $color_3;
+}
+.signin {
+	font-size: 14.5px;
+	color: $color_3;
+	text-align: center;
+	a {
+		&:hover {
+			text-decoration: underline royalblue;
+		}
+		color: $color_2;
+	}
+}
+.flex {
+	display: flex;
+	width: 100%;
+	gap: 6px;
+}
+.input {
+	font-size: medium;
+}
+.submit {
+	border: none;
+	outline: none;
+	padding: 10px;
+	border-radius: 10px;
+	color: $color_1;
+	font-size: 16px;
+	transform: .3s ease;
+	background-color: $background-color_2;
+	&:hover {
+		background-color: $background-color_4;
+	}
+}

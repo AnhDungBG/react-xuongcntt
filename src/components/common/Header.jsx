@@ -1,6 +1,12 @@
 import { Link, useNavigate } from "react-router-dom";
 
 function Header() {
+  // const { theme, setTheme } = useContext(ThemeContext);
+  // const handleMode = (e) => {
+
+  // }
+  const user = localStorage.getItem("user");
+  console.log(user);
   const navigate = useNavigate();
   const email = JSON.parse(localStorage.getItem("user"));
   const logout = () => {
@@ -36,7 +42,18 @@ function Header() {
           )}
         </ul>
       </div>
-      <div className="col-6"></div>
+      <div className="col-6">
+        <div className="user"></div>
+        {/* <label className="checkbox-inline">
+          <input
+            type="checkbox"
+            defaultChecked=""
+            data-toggle="toggle"
+            onChange={(e) => handleMode(e)}
+          />{" "}
+          First
+        </label> */}
+      </div>
     </div>
   );
 }

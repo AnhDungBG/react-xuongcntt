@@ -3,7 +3,7 @@ import "./App.scss";
 import Footer from "./components/common/Footer";
 import Header from "./components/common/Header";
 
-import AuthForm from "./components/AuthForm";
+import AuthForm from "./components/AuthForm/AuthForm";
 import PrivateRoute from "./components/PrivateRouter";
 import About from "./pages/About";
 import Home from "./pages/Home";
@@ -11,42 +11,7 @@ import Notfound from "./pages/Notfound";
 import Products from "./pages/ProductDetail";
 import Dashboard from "./pages/admin/Dashboard";
 import ProductForm from "./pages/admin/Product/ProductForm";
-
 function App() {
-  // const [products, setProducts] = useState([]);
-  // const navigate = useNavigate();
-  // const remove = (id) => {
-  //   (async () => {
-  //     await instance.delete(`products/${id}`);
-  //     const newProducts = products.filter((item) => item.id !== id);
-  //     setProducts(newProducts);
-  //   })();
-  // };
-  // useEffect(() => {
-  //   (async () => {
-  //     try {
-  //       const { data } = await instance.get("/products");
-  //       setProducts(data);
-  //     } catch (error) {
-  //       console.log(error);
-  //     }
-  //   })();
-  // }, []);
-
-  // const handleSubmit = async (data) => {
-  //   if (data.id) {
-  //     await instance.patch(`products/${data.id}`, data);
-  //   } else {
-  //     const res = await instance.post("products", data);
-  //     setProducts([...products, res.data]);
-  //   }
-  //   const newProducts = await getProducts();
-  //   setProducts(newProducts);
-
-  //   if (confirm("add successful, redirect to admin page")) {
-  //     navigate("/admin");
-  //   }
-  // };
   return (
     <>
       <Header />

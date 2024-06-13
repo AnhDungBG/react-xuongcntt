@@ -6,9 +6,9 @@ import style from "../admin/Dashboard.module.scss";
 import ProductCardAdmin from "./Product/ProductCardAdmin";
 const Dashboard = () => {
   const navigate = useNavigate();
-  const { state } = useContext(Context);
+  const { state, dispatch } = useContext(Context);
   const { products } = state;
-  const { deleteProduct } = useProductActions();
+  const { deleteProduct } = useProductActions(dispatch);
   const handleDelete = async (id) => {
     await deleteProduct(id);
     navigate("/admin");
