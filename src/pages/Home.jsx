@@ -1,8 +1,8 @@
 import ProductCard from "../components/ProductCard/ProductCard";
 import { useContext } from "react";
-import Context from "../store/Context";
+import { productContext } from "../store/Context.js";
 function Home() {
-  const { state } = useContext(Context);
+  const { state } = useContext(productContext);
   const { products } = state;
   return (
     <div className="container w-100">

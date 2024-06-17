@@ -1,11 +1,11 @@
-import Context from "./Context";
+import { productContext, userContext } from "./Context.js";
 import { useEffect, useReducer } from "react";
-import reducer from "./Reducer";
+import { productReducer, userReducer } from "./Reducer.js";
 import { initState } from "./Reducer";
 import PropTypes from "prop-types";
 import instance from "../axios";
 function ProductProvider({ children }) {
-  const [state, dispatch] = useReducer(reducer, initState);
+  const [state, dispatch] = useReducer(productReducer, initState);
   useEffect(() => {
     (async () => {
       try {
@@ -17,10 +17,24 @@ function ProductProvider({ children }) {
     })();
   }, []);
   return (
-    <Context.Provider value={{ state, dispatch }}>{children}</Context.Provider>
+    <productContext.Provider value={{ state, dispatch }}>
+      {children}
+    </productContext.Provider>
   );
 }
+const UserProvider = ({ children }) => {
+  const [state, dispatch] = useReducer(userReducer, initState);
+  return (
+    <userContext.Provider value={{ state, dispatch }}>
+      {" "}
+      {children}
+    </userContext.Provider>
+  );
+};
 ProductProvider.propTypes = {
   children: PropTypes.node.isRequired,
 };
-export { ProductProvider };
+UserProvider.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+export { ProductProvider, UserProvider };

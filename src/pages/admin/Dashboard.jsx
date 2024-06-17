@@ -1,12 +1,12 @@
 import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import Context from "../../store/Context";
-import useProductActions from "../../store/MiddleWares";
+import { productContext } from "../../store/Context.js";
+import { useProductActions } from "../../store/MiddleWares";
 import style from "../admin/Dashboard.module.scss";
 import ProductCardAdmin from "./Product/ProductCardAdmin";
 const Dashboard = () => {
   const navigate = useNavigate();
-  const { state, dispatch } = useContext(Context);
+  const { state, dispatch } = useContext(productContext);
   const { products } = state;
   const { deleteProduct } = useProductActions(dispatch);
   const handleDelete = async (id) => {

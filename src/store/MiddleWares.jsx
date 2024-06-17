@@ -42,4 +42,4 @@ const useProductActions = (dispatch) => {
   );
   return { addProduct, editProduct, deleteProduct };
 };
-export default useProductActions;
+export { useProductActions };

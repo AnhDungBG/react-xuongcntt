@@ -1,9 +1,9 @@
 const initState = {
   products: [],
-  user: [],
+  user: { isAuth: false, user: null },
 };
 
-const reducer = (state, action) => {
+const productReducer = (state, action) => {
   switch (action.type) {
     case "SET_PRODUCTS":
       return {
@@ -33,6 +33,27 @@ const reducer = (state, action) => {
       };
   }
 };
+const userReducer = (state, action) => {
+  switch (action.type) {
+    case "LOGIN":
+      return {
+        ...state,
+        user: {
+          ...state.user,
+          isAuth: true,
+          user: action.payload,
+        },
+      };
+    case "LOGOUT":
+      return {
+        ...state,
+        user: {
+          ...state.user,
+          isAuth: false,
+          user: null,
+        },
+      };
+  }
+};
 
-export default reducer;
-export { initState };
+export { initState, productReducer, userReducer };

@@ -4,12 +4,12 @@ import { useForm } from "react-hook-form";
 import { useNavigate, useParams } from "react-router-dom";
 import { productSchema } from "../../../ValidateForm/schemaForm";
 import instance from "../../../axios";
-import Context from "../../../store/Context";
-import useProductActions from "./../../../store/MiddleWares";
+import { productContext } from "../../../store/Context.js";
+import { useProductActions } from "./../../../store/MiddleWares";
 function ProductForm() {
   const navigate = useNavigate();
   const { id } = useParams();
-  const { dispatch } = useContext(Context);
+  const { dispatch } = useContext(productContext);
   const { editProduct, addProduct } = useProductActions(dispatch);
   const {
     register,

@@ -5,8 +5,12 @@ import { registerSchema, loginSchema } from "../../ValidateForm/schemaForm";
 import instance from "../../axios";
 import { Link, useNavigate } from "react-router-dom";
 import styles from "./AuthForm.module.scss";
+import { useContext } from "react";
+import { userContext } from "../../store/Context";
 
 function AuthForm({ isRegister }) {
+  const { dispatch } = useContext(userContext);
+
   const navigate = useNavigate();
   const handleData = async (data) => {
     try {
@@ -17,6 +21,7 @@ function AuthForm({ isRegister }) {
       } else {
         const res = await instance.post(`/login`, data);
         localStorage.setItem("user", JSON.stringify(res.data));
+        dispatch({ type: "LOGIN", action: res.first_name });
         navigate("/");
         return res;
       }
@@ -45,21 +50,21 @@ function AuthForm({ isRegister }) {
               className={styles.input}
               type="text"
               placeholder=""
-              {...register("first_name")}
+              {...register("first_name", { required: true })}
             />
+            <span>First name</span>
             {errors.first_name?.message && (
               <p className="text-danger">{errors.first_name?.message}</p>
             )}
-            <span>First name</span>
           </label>
           <label>
             <input
               className={styles.input}
               type="text"
               placeholder=""
-              {...register("last_name")}
+              {...register("last_name", { required: true })}
             />
-            <span>last_name</span>
+            <span>Last_name</span>
             {errors.last_name?.message && (
               <p className="text-danger">{errors.last_name?.message}</p>
             )}
@@ -73,7 +78,7 @@ function AuthForm({ isRegister }) {
           className={styles.input}
           type="email"
           placeholder=""
-          {...register("email")}
+          {...register("email", { required: true })}
         />
         <span>Email</span>
         {errors.email?.message && (
@@ -108,7 +113,7 @@ function AuthForm({ isRegister }) {
       ) : (
         ""
       )}
-      <button className={styles.submit}>
+      <button type="submit" className={styles.submit}>
         {isRegister ? "Register" : "Login"}
       </button>
       <p className="signin">
