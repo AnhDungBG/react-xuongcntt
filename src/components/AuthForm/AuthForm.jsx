@@ -20,8 +20,7 @@ function AuthForm({ isRegister }) {
         return res;
       } else {
         const res = await instance.post(`/login`, data);
-        localStorage.setItem("user", JSON.stringify(res.data));
-        dispatch({ type: "LOGIN", action: res.first_name });
+        dispatch({ type: "LOGIN", payload: res.data.user.first_name });
         navigate("/");
         return res;
       }

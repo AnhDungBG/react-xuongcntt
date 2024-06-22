@@ -1,10 +1,12 @@
+import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { userContext } from "../../store/Context";
 
 function Header() {
   const navigate = useNavigate();
-  const email = JSON.parse(localStorage.getItem("user"));
+  const { state, dispatch } = useContext(userContext);
   const logout = () => {
-    localStorage.removeItem("user");
+    dispatch({ type: "LOGOUT", payload: null });
     navigate("/login");
   };
   return (
@@ -15,38 +17,33 @@ function Header() {
             <Link to="/">Home</Link>
           </li>
           <li>
+            <Link to="/admin">Admin</Link>
+          </li>
+          <li>
             <Link to="/feature">Feature</Link>
           </li>
           <li>
             <Link to="/product">Products</Link>
           </li>
-          {email ? (
-            <button onClick={logout}>Logout</button>
+        </ul>
+      </div>
+      <div className="col-6">
+        <div className="user">
+          {state.user.isAuth ? (
+            `Hello ${state.user.user}`
           ) : (
             <li>
               <Link to="/login">Login</Link>
             </li>
           )}
-          {email ? (
-            ""
+        </div>
+        <div className="">
+          {state.user.isAuth ? (
+            <button onClick={() => logout()}>Logout</button>
           ) : (
-            <li>
-              <Link to="/Register">Register</Link>
-            </li>
+            ""
           )}
-        </ul>
-      </div>
-      <div className="col-6">
-        <div className="user"></div>
-        {/* <label className="checkbox-inline">
-          <input
-            type="checkbox"
-            defaultChecked=""
-            data-toggle="toggle"
-            onChange={(e) => handleMode(e)}
-          />{" "}
-          First
-        </label> */}
+        </div>
       </div>
     </div>
   );

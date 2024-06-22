@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { useNavigate, useParams } from "react-router-dom";
 import { productSchema } from "../../../ValidateForm/schemaForm";
 import instance from "../../../axios";
-import { productContext } from "../../../store/Context.js";
+import { productContext } from "../../../store/Context.jsx";
 import { useProductActions } from "./../../../store/MiddleWares";
 function ProductForm() {
   const navigate = useNavigate();

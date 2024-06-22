@@ -1,6 +1,6 @@
 const initState = {
   products: [],
-  user: { isAuth: false, user: null },
+  user: { isAuth: false, user: undefined },
 };
 
 const productReducer = (state, action) => {
@@ -50,7 +50,7 @@ const userReducer = (state, action) => {
         user: {
           ...state.user,
           isAuth: false,
-          user: null,
+          user: undefined,
         },
       };
   }

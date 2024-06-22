@@ -1,6 +1,6 @@
-import { productContext, userContext } from "./Context.js";
+import { productContext, userContext } from "./Context.jsx";
 import { useEffect, useReducer } from "react";
-import { productReducer, userReducer } from "./Reducer.js";
+import { productReducer, userReducer } from "./Reducer.jsx";
 import { initState } from "./Reducer";
 import PropTypes from "prop-types";
 import instance from "../axios";

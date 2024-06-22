@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { productContext } from "../../store/Context.js";
+import { productContext } from "../../store/Context.jsx";
 import { useProductActions } from "../../store/MiddleWares";
 import style from "../admin/Dashboard.module.scss";
 import ProductCardAdmin from "./Product/ProductCardAdmin";
