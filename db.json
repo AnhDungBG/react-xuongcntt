@@ -98,11 +98,11 @@
   ],
   "users": [
     {
-      "email": "anhdungbg2005.com",
+      "email": "anhdungbg2005@gmail.com",
       "password": "$2a$10$nbYttVIqPToPCoxtSZqQIOtC9KdPixVq4dAowPuhsIxJeUeH6auXK",
       "first_name": "Nguyễn",
       "last_name": "Dũng",
-      "avatar": "https://res.cloudinary.com/dkd2wwprz/image/upload/v1719216066/xbkcpsuckwfmqnt1fput.png",
+      "avatar": "https://th.bing.com/th?q=M%c3%a8o+D%e1%bb%85+Th%c6%b0%c6%a1ng&w=138&h=138&c=7&o=5&pid=1.7&mkt=en-WW&cc=VN&setlang=en&adlt=moderate",
       "confirm_password": "123456",
       "role": "admin",
       "id": 1
