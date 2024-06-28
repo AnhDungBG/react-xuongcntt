@@ -57,16 +57,10 @@ function Products() {
                 <span>Loại</span>
                 <ul>
                   <li>
-                    <input type="checkbox" /> Dưới 100k
+                    <input type="checkbox" /> Giày nam
                   </li>
                   <li>
-                    <input type="checkbox" /> 100k -200k
-                  </li>
-                  <li>
-                    <input type="checkbox" /> 200k - 300k
-                  </li>
-                  <li>
-                    <input type="checkbox" /> 300k - 500k
+                    <input type="checkbox" /> Giày nữ
                   </li>
                 </ul>
               </div>
@@ -74,16 +68,18 @@ function Products() {
                 <span>Thương hiệu</span>
                 <ul>
                   <li>
-                    <input type="checkbox" /> Dưới 100k
+                    <input type="checkbox" /> Nike Air
                   </li>
                   <li>
-                    <input type="checkbox" /> 100k -200k
+                    <input type="checkbox" /> Nike Air Max
                   </li>
                   <li>
-                    <input type="checkbox" /> 200k - 300k
+                    <input type="checkbox" />
+                    Nike Jordan
                   </li>
                   <li>
-                    <input type="checkbox" /> 300k - 500k
+                    <input type="checkbox" />
+                    Puma
                   </li>
                 </ul>
               </div>
