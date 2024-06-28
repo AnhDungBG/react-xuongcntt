@@ -1,219 +1,111 @@
 {
   "products": [
     {
-      "title": "nannana",
-      "price": 115,
-      "description": "nanan",
-      "id": 35
+      "title": "Giày Nam Air Jordan 14 Retro",
+      "price": 200,
+      "description": "Nike Air Jordan 14 Retro - sự kết hợp hoàn hảo giữa tốc độ vượt trội và phong cách đẳng cấp",
+      "thumbnail": "https://res.cloudinary.com/dkd2wwprz/image/upload/v1719552066/ourmmg1wmunpstpdfdx8.webp",
+      "id": 75
     },
     {
-      "title": "nannana",
-      "price": 111,
-      "description": "nanan",
-      "id": 36
+      "title": "Giày Nam Men's Air Jordan 2 Retro",
+      "price": 150,
+      "description": " Đôi giày sneaker này sở hữu gam màu Light Ginger, Trắng và Đen tạo nên vẻ ngoài táo bạo và độc đáo, thu hút sự chú ý bất kỳ nơi nào bạn đến.",
+      "brand": "nike",
+      "thumbnail": "https://res.cloudinary.com/dkd2wwprz/image/upload/v1719553245/u3q8blucvav4bbh44may.webp",
+      "id": 77
     },
     {
-      "title": "nannana",
-      "price": 111,
-      "description": "nanan",
-      "id": 37
+      "title": "Giày PUMA COURT RIDER",
+      "price": 130,
+      "description": "Thiết kế cho sự thoải mái tối đa",
+      "brand": "puma",
+      "thumbnail": "https://res.cloudinary.com/dkd2wwprz/image/upload/v1719555954/a3fa7unavc8sb9g14uim.webp",
+      "id": 78
     },
     {
-      "title": "nannana",
-      "price": 111,
-      "description": "nanan",
-      "id": 38
+      "title": "Nike Air Max 97 SE",
+      "price": 160,
+      "description": "Đường chỉ may tỉ mỉ, tinh tế, tạo nên vẻ ngoài hoàn hảo cho giày.",
+      "brand": "nike",
+      "thumbnail": "https://res.cloudinary.com/dkd2wwprz/image/upload/v1719556067/cmgx2yhgtew2igptzty0.webp",
+      "id": 79
     },
     {
-      "title": "nannana",
-      "price": 11133,
-      "description": "nanan",
-      "id": 39
+      "title": "Neumel GRAYBROWN Snow",
+      "price": 300,
+      "description": "Neumel GRAYBROWN Snow sự kết hợp hoàn hảo giữa tốc độ vượt trội và phong cách đẳng cấp",
+      "brand": "puma",
+      "thumbnail": "https://res.cloudinary.com/dkd2wwprz/image/upload/v1719566244/gacsrp3lhq063pl4lrur.webp",
+      "id": 80
     },
     {
-      "title": "MacBook Pro",
-      "price": 1749555,
-      "description": "MacBook Pro 2021 with mini-LED display may launch between September, November",
-      "id": 40
+      "title": "Luka Doncic X Air Jordan",
+      "price": 200,
+      "description": "Luka Doncic X Air Jordan sự kết hợp hoàn hảo giữa tốc độ vượt trội và phong cách đẳng cấp",
+      "brand": "nike_jordan",
+      "thumbnail": "https://res.cloudinary.com/dkd2wwprz/image/upload/v1719566295/v7i8g23ni8zre0b1qyj8.webp",
+      "id": 81
     },
     {
-      "title": "MacBook Pro",
-      "price": 1749444,
-      "description": "MacBook Pro 2021 with mini-LED display may launch between September, November",
-      "id": 41
+      "title": "Giày Nam Jordan Max Aura",
+      "price": 200,
+      "description": "Giày Nam Jordan Max Aurasự kết hợp hoàn hảo giữa tốc độ vượt trội và phong cách đẳng cấp",
+      "brand": "nike_Air_Max",
+      "thumbnail": "https://res.cloudinary.com/dkd2wwprz/image/upload/v1719566327/jvrzx4dayzhwo1r6t30x.webp",
+      "id": 82
     },
     {
-      "title": "MacBook Pro",
-      "price": 17496,
-      "description": "MacBook Pro 2021 with mini-LED display may launch between September, November",
-      "id": 42
+      "title": "Air Jordan DMP 1 Retro",
+      "price": 199,
+      "description": "Air Jordan DMP 1 Retro kết hợp hoàn hảo giữa tốc độ vượt trội và phong cách đẳng cấp",
+      "brand": "nike_Air_Max",
+      "thumbnail": "https://res.cloudinary.com/dkd2wwprz/image/upload/v1719566561/gtvedr1bagddqcr36gti.webp",
+      "id": 83
     },
     {
-      "title": "MacBook Prokkk",
-      "price": 1749,
-      "description": "MacBook Pro 2021 with mini-LED display may launch between September, November",
-      "id": 43
+      "title": "Converse Run Star Motion",
+      "price": 200,
+      "description": "Converse Run Star Motion kết hợp hoàn hảo giữa tốc độ vượt trội và phong cách đẳng cấp",
+      "brand": "nike_Air_Max",
+      "thumbnail": "https://res.cloudinary.com/dkd2wwprz/image/upload/v1719566516/ugpulsmfihi5tszzj3xe.webp",
+      "id": 84
     },
     {
-      "title": "MacBook Prokkk",
-      "price": 222,
-      "description": "ok",
-      "id": 44
+      "title": "Giày Nam Jordan Max Aura",
+      "price": 200,
+      "description": "Giày Nam Jordan Max Aurasự kết hợp hoàn hảo giữa tốc độ vượt trội và phong cách đẳng cấp",
+      "brand": "nike_Air_Max",
+      "thumbnail": "https://res.cloudinary.com/dkd2wwprz/image/upload/v1719566329/ohj4dkw0f5s2frmo1obw.webp",
+      "id": 85
     },
     {
-      "title": "MacBook Pro 2020",
-      "price": 1749,
-      "description": "MacBook Pro 2021 with mini-LED display may launch between September, November",
-      "id": 45
+      "title": "Giày Nam Nike Air Max",
+      "price": 250,
+      "description": "Giày Nam Jordan Max Aurasự kết hợp hoàn hảo giữa tốc độ vượt trội và phong cách đẳng cấp",
+      "brand": "nike_Air_Max",
+      "thumbnail": "https://res.cloudinary.com/dkd2wwprz/image/upload/v1719566435/rggu7jvpxi1yyz4lpts2.webp",
+      "id": 86
     },
     {
-      "title": "MacBook Pro",
-      "price": 174944,
-      "description": "MacBook Pro 2021 with mini-LED display may launch between September, November",
-      "id": 46
-    },
-    {
-      "title": "MacBook Prokkkjjjj",
-      "price": 222,
-      "description": "ok",
-      "id": 47
-    },
-    {
-      "title": "MacBook Probbbb",
-      "price": 1749,
-      "description": "MacBook Pro 2021 with mini-LED display may launch between September, November",
-      "id": 48
-    },
-    {
-      "title": "MacBook Pro 2020",
-      "price": 1749,
-      "description": "MacBook Pro 2021 with mini-LED display may launch between September, November",
-      "id": 49
-    },
-    {
-      "title": "MacBook Pro 2020",
-      "price": 1749,
-      "description": "MacBook Pro 2021 with mini-LED display may launch between September, November",
-      "id": 51
-    },
-    {
-      "title": "MacBook Pro M1",
-      "price": 1749,
-      "description": "MacBook Pro 2021 with mini-LED display may launch between September, November",
-      "id": 52
+      "title": "Giày Nam Nike Max",
+      "price": 250,
+      "description": "Giày Nam Jordan Max Aurasự kết hợp hoàn hảo giữa tốc độ vượt trội và phong cách đẳng cấp",
+      "brand": "nike_jordan",
+      "thumbnail": "https://res.cloudinary.com/dkd2wwprz/image/upload/v1719566482/ypn84ksea4qvkpyig90o.webp",
+      "id": 87
     }
   ],
   "users": [
     {
-      "email": "anhdunghhbg2005@gmail.com",
-      "password": "$2a$10$3jUyk6XBfzv/zKsC6SGd5.faY8iHAYOPvqDz2ioKpa75OVJZyBZe.",
-      "id": 1
-    },
-    {
-      "email": "abcbc@gmail.com",
-      "password": "$2a$10$VNJ0kVbYudD1ahlX2PDU2OfOWffxMtu8.ytL6muaTtHKWBiWiuLYG",
-      "id": 2
-    },
-    {
-      "email": "nnnananns@gmail.com",
-      "password": "$2a$10$pbG.lQdeHUHeSovJkaBKcu.OSScBVIUquy50pSDg56gKRKzW7QcrW",
-      "id": 3
-    },
-    {
-      "email": "anannan@gmail.com",
-      "password": "$2a$10$JowvzqhTrUwW8qqlr7MtMOKiLGDP9rIL0Xs/635F6AquYBwCA.t92",
-      "id": 4
-    },
-    {
-      "email": "abc@gmail.com",
-      "password": "$2a$10$/zJPz.kkhHQCImXJ0InFcek4dKJfh8EsdGGOrnvOoM3RWIQHoUOnS",
-      "id": 5
-    },
-    {
-      "email": "abcd@gmail.com",
-      "password": "$2a$10$crp0VzWnIlDpjcbm3kG7heAMIxzhjsjZuQZdpwxosumICG6X7G7v2",
-      "id": 6
-    },
-    {
-      "email": "abcde@gmail.com",
-      "password": "$2a$10$L3qlTMQm96kbaLtzXNLfXOo.zgXaxv8T4IrvNqLAdPABnRdUJriKO",
-      "id": 7
-    },
-    {
-      "email": "aabb@gmail.com",
-      "password": "$2a$10$VW8d0ncSkuPZEBeg86Wm0ORQGT3VTY/p.E6FK31axI9K8TQt5TD76",
-      "id": 8
-    },
-    {
-      "email": "aabbb@gmail.com",
-      "password": "$2a$10$YAK0WeWfelnyTdORe/wq2e.NmGkckIcVjzNtPqOgP/YwyxaizLPVO",
-      "id": 9
-    },
-    {
-      "email": "aa1@gmail.com",
-      "password": "$2a$10$8LZKfHe9r6nTj/hTohoW6OIXNKlFydc3dqVOrRmHL2JFp8zfdq0Gm",
-      "id": 10
-    },
-    {
-      "email": "aaaa@gmail.com",
-      "password": "$2a$10$PLEzfTkgT4gjfNmsPfpLp.OEHthvxOGeEEiAyW241IUeoS992Nyua",
-      "id": 11
-    },
-    {
-      "email": "ananan@gmail.com",
-      "password": "$2a$10$IaaJaC1rZ1lxr0OS9mOD..nuP7LZAgH.QMVUg1lAP0F5ZmpFwFfmy",
-      "confirm_password": "anhdung",
-      "id": 12
-    },
-    {
-      "email": "a1234@gmail.com",
-      "password": "$2a$10$Xpmj7O4KMugV9kUN2WfTaeacvyNrJERVNJGzjOV3lc5J/ErIqLRmG",
-      "confirm_password": "anhdung",
-      "id": 13
-    },
-    {
-      "email": "a12234@gmail.com",
-      "password": "$2a$10$eBgwFovR0vCXjM4wJbtu3etVjRFO.hqvT5KOClit3Zqc8rkYqMUQW",
-      "confirm_password": "123456",
-      "id": 14
-    },
-    {
-      "email": "a12311@gmail.com",
-      "password": "$2a$10$n1uUvVPQ7xXEpudbolDK5O99lGvm/5IoCCJpByxxdP7EFl/h8ZNBa",
-      "confirm_password": "1234567",
-      "id": 15
-    },
-    {
-      "email": "a12122@gmail.com",
-      "password": "$2a$10$qzfQRmjz4AqiwFumKH5ffuqrX5fIWURZgp7mHc/RbHXH535Ya5OKC",
-      "first_name": "Anh",
-      "last_name": "Dung",
-      "confirm_password": "123456",
-      "id": 16
-    },
-    {
-      "email": "aaaaa123@gmail.com",
-      "password": "$2a$10$mbsGcyiGlWc9Fz66InyVUu7.50Kva7rfEqnzIYPTI8ndPPoRJNlyC",
-      "first_name": "Dung",
-      "last_name": "Anh",
-      "confirm_password": "123456",
-      "id": 17
-    },
-    {
-      "email": "anhdunghhbgg2005@gmail.com",
-      "password": "$2a$10$AwpxfZd6iK1WBszMtE18seEMc4GY6lgyg3XbyF5VubfkiurFaosj.",
-      "first_name": "Dung",
-      "last_name": "Anh",
-      "confirm_password": "123456",
-      "id": 18
-    },
-    {
-      "email": "111@gmail.com",
-      "password": "$2a$10$H/C/zhwNGcG.lkgFVLTJgOmBD39aKY0dcTL31ysl82b/8de3rSpzm",
+      "email": "anhdungbg2005.com",
+      "password": "$2a$10$nbYttVIqPToPCoxtSZqQIOtC9KdPixVq4dAowPuhsIxJeUeH6auXK",
       "first_name": "Nguyễn",
       "last_name": "Dũng",
+      "avatar": "https://res.cloudinary.com/dkd2wwprz/image/upload/v1719216066/xbkcpsuckwfmqnt1fput.png",
       "confirm_password": "123456",
-      "id": 19
+      "role": "admin",
+      "id": 1
     }
   ]
 }

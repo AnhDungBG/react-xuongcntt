@@ -5,7 +5,7 @@ const useProductActions = (dispatch) => {
   // add product
 
   const addProduct = useCallback(
-    async (data) => {
+    async ({ data }) => {
       try {
         const res = await instance.post("products", data);
         dispatch({ type: "ADD_PRODUCT", payload: res.data });
@@ -20,6 +20,8 @@ const useProductActions = (dispatch) => {
   const editProduct = useCallback(
     async ({ data, id }) => {
       try {
+        console.log(id);
+        console.log(data);
         const res = await instance.patch(`products/${id}`, data);
         dispatch({ type: "EDIT_PRODUCT", payload: res.data });
       } catch (error) {

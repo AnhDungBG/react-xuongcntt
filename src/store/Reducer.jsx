@@ -33,27 +33,5 @@ const productReducer = (state, action) => {
       };
   }
 };
-const userReducer = (state, action) => {
-  switch (action.type) {
-    case "LOGIN":
-      return {
-        ...state,
-        user: {
-          ...state.user,
-          isAuth: true,
-          user: action.payload,
-        },
-      };
-    case "LOGOUT":
-      return {
-        ...state,
-        user: {
-          ...state.user,
-          isAuth: false,
-          user: undefined,
-        },
-      };
-  }
-};
 
-export { initState, productReducer, userReducer };
+export { initState, productReducer };

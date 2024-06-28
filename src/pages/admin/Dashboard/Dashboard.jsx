@@ -1,9 +1,11 @@
 import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { productContext } from "../../store/Context.jsx";
-import { useProductActions } from "../../store/MiddleWares";
-import style from "../admin/Dashboard.module.scss";
-import ProductCardAdmin from "./Product/ProductCardAdmin";
+import { productContext } from "../../../store/Context.jsx";
+import { useProductActions } from "../../../store/MiddleWares.jsx";
+import style from "./Dashboard.module.scss";
+import ProductCardAdmin from "./../Product/ProductCardAdmin";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 const Dashboard = () => {
   const navigate = useNavigate();
   const { state, dispatch } = useContext(productContext);
@@ -34,27 +36,29 @@ const Dashboard = () => {
   const productList = getProductList();
 
   return (
-    <div>
-      <h1>Hello Admin</h1>
+    <div className="mt-2">
       <Link to="/admin/product-form" className="btn btn-primary">
         Add new product
       </Link>
       <div className={`${style.filter__products}`}>
-        <div className="search__bar">
+        <form className="search__bar">
           <input
             type="text"
             placeholder="Search product by title...."
             onChange={handleChangeValue}
             value={searchValue}
           />
-        </div>
-        <div>
+          <button>
+            <FontAwesomeIcon icon={faMagnifyingGlass} />
+          </button>
+        </form>
+        <div className={`${style.filter}`}>
           <select onChange={handleFilterProduct} name="filter">
             <option value="">---Bộ lọc----</option>
-            <option value="iphone">Iphone</option>
-            <option value="samsung">Samsung</option>
-            <option value="xiaomi">Xiaomi</option>
-            <option value="sony">Sony</option>
+            <option value="nike">Nike Air</option>
+            <option value="puma">Puma</option>
+            <option value="nike_jordan">Nike Jordan</option>
+            <option value="nike_Air_Max">Nike Air Max</option>
           </select>
         </div>
       </div>
@@ -64,8 +68,10 @@ const Dashboard = () => {
           <tr>
             <th>ID</th>
             <th>Title</th>
+            <th>Brand</th>
             <th>Price</th>
             <th>Description</th>
+            <th>Image</th>
             <th>Action</th>
           </tr>
         </thead>
