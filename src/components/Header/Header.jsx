@@ -62,7 +62,7 @@ function Header() {
                   <FontAwesomeIcon icon={faUser} />
                 </Link>
               )}
-              <button onClick={() => logout()}>Logout</button>
+              {user ? <button onClick={() => logout()}>Logout</button> : ""}
             </li>
             <li>
               <Link to={"/cart"}>

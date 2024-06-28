@@ -93,20 +93,28 @@
       "price": 250,
       "description": "Giày Nam Jordan Max Aurasự kết hợp hoàn hảo giữa tốc độ vượt trội và phong cách đẳng cấp",
       "brand": "nike_jordan",
+      "thumbnail": "https://res.cloudinary.com/dkd2wwprz/image/upload/v1719566482/ypn84ksea4qvkpyig90o.webp",
       "id": 87
     }
   ],
   "users": [
-   
-   
     {
       "email": "admin@gmail.com",
       "password": "$2a$10$jsTf6nRhplXl0CFea/a4.O9LdT48E5wesXJDDuNTK8SuBmV.Wom4y",
       "first_name": "Nguyễn",
       "last_name": "Dũng",
+      "avatar": "https://th.bing.com/th?q=M%c3%a8o+D%e1%bb%85+Th%c6%b0%c6%a1ng&w=138&h=138&c=7&o=5&pid=1.7&mkt=en-WW&cc=VN&setlang=en&adlt=moderate",
+      "role": "admin",
       "confirm_password": "123456",
-      "thumbnail": "https://res.cloudinary.com/dkd2wwprz/image/upload/v1719566482/ypn84ksea4qvkpyig90o.webp",
       "id": 6
+    },
+    {
+      "email": "anhdungbg@gmail.com",
+      "password": "$2a$10$xKhf9frmA2BNaLTDlTvpVuB/hfwC01RbecRzt9HdA2IpkS1GiaC22",
+      "first_name": "Nguyễn",
+      "last_name": "Dũng",
+      "confirm_password": "123456",
+      "id": 7
     }
   ]
 }
