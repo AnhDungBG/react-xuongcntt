@@ -81,7 +81,7 @@ function Footer() {
           <img src="https://via.placeholder.com/50" alt="Payment Method" />
           <img src="https://via.placeholder.com/50" alt="Payment Method" />
         </div>
-        <p>© Bản quyền thuộc về HaluShoe | Cung cấp bởi Sapo</p>
+        <p>© Bản quyền thuộc về AnhDung | Cung cấp bởi AnhDung</p>
       </div>
     </footer>
   );

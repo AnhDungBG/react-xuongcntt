@@ -2,10 +2,11 @@
   "products": [
     {
       "title": "Giày Nam Air Jordan 14 Retro",
-      "price": 200,
+      "price": 222,
       "description": "Nike Air Jordan 14 Retro - sự kết hợp hoàn hảo giữa tốc độ vượt trội và phong cách đẳng cấp",
       "thumbnail": "https://res.cloudinary.com/dkd2wwprz/image/upload/v1719552066/ourmmg1wmunpstpdfdx8.webp",
-      "id": 75
+      "id": 75,
+      "brand": ""
     },
     {
       "title": "Giày Nam Men's Air Jordan 2 Retro",
@@ -49,7 +50,7 @@
     },
     {
       "title": "Giày Nam Jordan Max Aura",
-      "price": 200,
+      "price": 22,
       "description": "Giày Nam Jordan Max Aurasự kết hợp hoàn hảo giữa tốc độ vượt trội và phong cách đẳng cấp",
       "brand": "nike_Air_Max",
       "thumbnail": "https://res.cloudinary.com/dkd2wwprz/image/upload/v1719566327/jvrzx4dayzhwo1r6t30x.webp",
@@ -92,20 +93,20 @@
       "price": 250,
       "description": "Giày Nam Jordan Max Aurasự kết hợp hoàn hảo giữa tốc độ vượt trội và phong cách đẳng cấp",
       "brand": "nike_jordan",
-      "thumbnail": "https://res.cloudinary.com/dkd2wwprz/image/upload/v1719566482/ypn84ksea4qvkpyig90o.webp",
       "id": 87
     }
   ],
   "users": [
+   
+   
     {
-      "email": "anhdungbg2005@gmail.com",
-      "password": "$2a$10$nbYttVIqPToPCoxtSZqQIOtC9KdPixVq4dAowPuhsIxJeUeH6auXK",
+      "email": "admin@gmail.com",
+      "password": "$2a$10$jsTf6nRhplXl0CFea/a4.O9LdT48E5wesXJDDuNTK8SuBmV.Wom4y",
       "first_name": "Nguyễn",
       "last_name": "Dũng",
-      "avatar": "https://th.bing.com/th?q=M%c3%a8o+D%e1%bb%85+Th%c6%b0%c6%a1ng&w=138&h=138&c=7&o=5&pid=1.7&mkt=en-WW&cc=VN&setlang=en&adlt=moderate",
       "confirm_password": "123456",
-      "role": "admin",
-      "id": 1
+      "thumbnail": "https://res.cloudinary.com/dkd2wwprz/image/upload/v1719566482/ypn84ksea4qvkpyig90o.webp",
+      "id": 6
     }
   ]
 }

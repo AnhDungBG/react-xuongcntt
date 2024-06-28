@@ -122,7 +122,7 @@ function AuthForm({ isRegister }) {
             }
           >
             {isRegister ? "Sign in" : "Sign up"}
-          </Link>{" "}
+          </Link>
         </p>
       </form>
     </div>

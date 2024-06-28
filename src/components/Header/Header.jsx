@@ -12,7 +12,7 @@ import {
 import { useEffect, useState } from "react";
 
 function Header() {
-  const { user, isAuthenticated } = useContext(authContext);
+  const { user, isAuthenticated, logout } = useContext(authContext);
   const [bg, setBG] = useState("old");
 
   useEffect(() => {
@@ -53,8 +53,8 @@ function Header() {
                 <Link to={"/admin"}>
                   <img
                     style={{ borderRadius: "50%" }}
-                    src={user.avatar}
-                    alt=""
+                    src={user?.avatar}
+                    alt="."
                   />
                 </Link>
               ) : (
@@ -62,6 +62,7 @@ function Header() {
                   <FontAwesomeIcon icon={faUser} />
                 </Link>
               )}
+              <button onClick={() => logout()}>Logout</button>
             </li>
             <li>
               <Link to={"/cart"}>
