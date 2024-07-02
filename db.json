@@ -6,8 +6,18 @@
       "description": "Nike Air Jordan 14 Retro - sự kết hợp hoàn hảo giữa tốc độ vượt trội và phong cách đẳng cấp",
       "thumbnail": "https://res.cloudinary.com/dkd2wwprz/image/upload/v1719552066/ourmmg1wmunpstpdfdx8.webp",
       "id": 75,
-      "brand": "nike"
-
+      "brand": "nike",
+      "colors": [
+        {
+          "name":"new",
+          "img": "https://res.cloudinary.com/dkd2wwprz/image/upload/v1719552066/ourmmg1wmunpstpdfdx8.webp"
+        },
+        {
+          "name":"new nn",
+          "img": "https://res.cloudinary.com/dkd2wwprz/image/upload/v1719552066/ourmmg1wmunpstpdfdx8.webp"
+        }
+      ],
+      "sizes": [38, 39, 40 ,41,42]
     },
     {
       "title": "Giày Nam Men's Air Jordan 2 Retro",

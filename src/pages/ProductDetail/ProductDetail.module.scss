@@ -105,6 +105,73 @@
     }
 
 
+
+    .color_option,
+    .size_option {
+        max-width: 150px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        border: 1px solid gray;
+        margin: 5px;
+        padding: 8px;
+
+        img {
+            width: 40px;
+            height: 40px;
+        }
+
+        span {
+            width: auto;
+            color: black;
+            font-size: 16px;
+            margin-left: 10px;
+            height: 10px;
+        }
+
+        &:hover {
+            border: 1px solid #4bd963;
+
+        }
+    }
+
+    .selected {
+        border: 1px solid #4bd963;
+        position: relative;
+    }
+
+    .selected::after {
+        content: '✔';
+        color: whitesmoke;
+        position: absolute;
+        bottom: -0px;
+        right: 0px;
+        font-size: 12px;
+
+    }
+
+    .colors {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .sizes {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .size_option {
+            line-height: 10px;
+            padding: 0 30px;
+            line-height: 14px;
+        }
+    }
+
+
 }
 
 .sidebar {

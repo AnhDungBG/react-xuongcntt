@@ -4,6 +4,8 @@ import styles from "./ProductDetail.module.scss";
 import instance from "../../axios";
 import Button from "./../../components/Button/Button";
 function ProductDetail() {
+  const [selectedSize, setSelectedSize] = useState(null);
+  const [selectedColor, setSelectedColor] = useState(null);
   const [quantity, setQuantity] = useState(1);
   const { id } = useParams();
   const [product, setProduct] = useState("");
@@ -12,6 +14,12 @@ function ProductDetail() {
   };
   const handlePlusQuantity = () => {
     setQuantity(quantity + 1);
+  };
+  const handleChangeColor = (color) => {
+    setSelectedColor(color);
+  };
+  const handleChangeSize = (size) => {
+    setSelectedSize(size);
   };
   useEffect(() => {
     (async () => {
@@ -40,28 +48,35 @@ function ProductDetail() {
                     Thương hiệu : <span>{product.brand}</span>
                   </p>
                 </div>
-                <span>${product.price * quantity}</span>
+                <span>${+product.price * quantity}</span>
                 <div>
-                  <div className="">
+                  <div className={`${styles.colors}`}>
                     Color :
                     {product?.colors?.map((color, index) => (
-                      <input
-                        key={index}
-                        type="radio"
-                        name="color"
-                        value={color}
-                      />
+                      <div
+                        key={`color-${index}`}
+                        className={`${styles.color_option}  ${
+                          styles[selectedColor === color.name ? "selected" : ""]
+                        }`}
+                        onClick={() => handleChangeColor(color.name)}
+                      >
+                        <img src={`${color.img}`} alt={color.name} />
+                        <span>{color.name}</span>
+                      </div>
                     ))}
                   </div>
-                  <div>
+                  <div className={`${styles.sizes}`}>
                     Size:
                     {product?.sizes?.map((size, index) => (
-                      <input
-                        key={index}
-                        type="radio"
-                        name="size"
-                        value={size}
-                      />
+                      <div
+                        key={`size-${index}`}
+                        className={`${styles.size_option} ${
+                          styles[selectedSize == size ? "selected" : ""]
+                        }`}
+                        onClick={() => handleChangeSize(size)}
+                      >
+                        {size}
+                      </div>
                     ))}
                   </div>
                 </div>
