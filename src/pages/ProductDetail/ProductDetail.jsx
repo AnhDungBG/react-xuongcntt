@@ -53,7 +53,7 @@ function ProductDetail() {
                   <div className={`${styles.colors}`}>
                     Color :
                     {product?.colors?.map((color, index) => (
-                      <div
+                      <button
                         key={`color-${index}`}
                         className={`${styles.color_option}  ${
                           styles[selectedColor === color.name ? "selected" : ""]
@@ -62,13 +62,13 @@ function ProductDetail() {
                       >
                         <img src={`${color.img}`} alt={color.name} />
                         <span>{color.name}</span>
-                      </div>
+                      </button>
                     ))}
                   </div>
                   <div className={`${styles.sizes}`}>
                     Size:
                     {product?.sizes?.map((size, index) => (
-                      <div
+                      <button
                         key={`size-${index}`}
                         className={`${styles.size_option} ${
                           styles[selectedSize == size ? "selected" : ""]
@@ -76,7 +76,7 @@ function ProductDetail() {
                         onClick={() => handleChangeSize(size)}
                       >
                         {size}
-                      </div>
+                      </button>
                     ))}
                   </div>
                 </div>
