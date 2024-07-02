@@ -80,11 +80,13 @@ function ProductDetail() {
                     ))}
                   </div>
                 </div>
-                <div>
-                  Quantity:
-                  <button onClick={() => handleMinusQuantity()}>-</button>
-                  <span>{quantity}</span>
-                  <button onClick={() => handlePlusQuantity()}>+</button>
+                <div className={`${styles.quantity}`}>
+                  <p>Quantity:</p>
+                  <div className={`${styles.detail}`}>
+                    <button onClick={() => handleMinusQuantity()}>-</button>
+                    <span>{quantity}</span>
+                    <button onClick={() => handlePlusQuantity()}>+</button>
+                  </div>
                   <Button type="primary">Mua ngay</Button>
                 </div>
                 <div className={`${styles.properties}`}>

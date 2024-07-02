@@ -132,6 +132,7 @@
 
         &:hover {
             border: 1px solid #4bd963;
+            cursor: pointer;
 
         }
     }
@@ -163,14 +164,62 @@
         display: flex;
         align-items: center;
         flex-wrap: wrap;
+        margin-top: 20px;
 
         .size_option {
             line-height: 10px;
             padding: 0 30px;
             line-height: 14px;
+
         }
     }
 
+    .quantity {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+
+        p {
+            margin: 0;
+        }
+
+        button {
+            border: none;
+            margin-left: 100px;
+        }
+
+        .detail {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 10px;
+
+            button {
+                width: 40px;
+                height: 40px;
+                border: 1px solid gray;
+                background-color: white;
+                border-radius: 0;
+                margin: 0;
+            }
+
+            span {
+                border: 1px solid gray;
+                border-left: none;
+                border-right: none;
+                width: 60px;
+                text-align: center;
+                height: 40px;
+                font-size: 17px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: black;
+
+            }
+        }
+
+    }
 
 }
 

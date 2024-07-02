@@ -25,7 +25,18 @@
       "description": " Đôi giày sneaker này sở hữu gam màu Light Ginger, Trắng và Đen tạo nên vẻ ngoài táo bạo và độc đáo, thu hút sự chú ý bất kỳ nơi nào bạn đến.",
       "brand": "nike",
       "thumbnail": "https://res.cloudinary.com/dkd2wwprz/image/upload/v1719553245/u3q8blucvav4bbh44may.webp",
-      "id": 77
+      "id": 77,
+      "colors": [
+        {
+          "name":"new",
+          "img": "https://res.cloudinary.com/dkd2wwprz/image/upload/v1719553245/u3q8blucvav4bbh44may.webp"
+        },
+        {
+          "name":"new nn",
+          "img": "https://res.cloudinary.com/dkd2wwprz/image/upload/v1719553245/u3q8blucvav4bbh44may.webp"
+        }
+      ],
+      "sizes": [38, 39, 40 ,41,42]
     },
     {
       "title": "Giày PUMA COURT RIDER",
@@ -33,7 +44,18 @@
       "description": "Thiết kế cho sự thoải mái tối đa",
       "brand": "puma",
       "thumbnail": "https://res.cloudinary.com/dkd2wwprz/image/upload/v1719555954/a3fa7unavc8sb9g14uim.webp",
-      "id": 78
+      "id": 78,
+      "colors": [
+        {
+          "name":"new",
+          "img": "https://res.cloudinary.com/dkd2wwprz/image/upload/v1719555954/a3fa7unavc8sb9g14uim.webp"
+        },
+        {
+          "name":"new nn",
+          "img": "https://res.cloudinary.com/dkd2wwprz/image/upload/v1719555954/a3fa7unavc8sb9g14uim.webp"
+        }
+      ],
+      "sizes": [38, 39, 40 ,41,42]
     },
     {
       "title": "Nike Air Max 97 SE",
@@ -41,7 +63,18 @@
       "description": "Đường chỉ may tỉ mỉ, tinh tế, tạo nên vẻ ngoài hoàn hảo cho giày.",
       "brand": "nike",
       "thumbnail": "https://res.cloudinary.com/dkd2wwprz/image/upload/v1719556067/cmgx2yhgtew2igptzty0.webp",
-      "id": 79
+      "id": 79,
+      "colors": [
+        {
+          "name":"new",
+          "img": "https://res.cloudinary.com/dkd2wwprz/image/upload/v1719556067/cmgx2yhgtew2igptzty0.webp"
+        },
+        {
+          "name":"new nn",
+          "img": "https://res.cloudinary.com/dkd2wwprz/image/upload/v1719556067/cmgx2yhgtew2igptzty0.webp"
+        }
+      ],
+      "sizes": [38, 39, 40 ,41,42]
     },
     {
       "title": "Neumel GRAYBROWN Snow",
