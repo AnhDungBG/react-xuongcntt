@@ -6,7 +6,7 @@ const AccessDenied = () => {
           <div className="card">
             <div className="card-body">
               <h1 className="card-title text-danger">403</h1>
-              <p className="card-text">Bạn không có quyền vào trang này.</p>
+              <p className="card-text">Bạn không có quyền vào trang admin .</p>
               <a href="/" className="btn btn-primary">
                 Về trang chủ
               </a>

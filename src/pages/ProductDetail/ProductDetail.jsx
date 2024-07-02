@@ -40,7 +40,7 @@ function ProductDetail() {
                     Thương hiệu : <span>{product.brand}</span>
                   </p>
                 </div>
-                <span>${product.price}</span>
+                <span>${product.price * quantity}</span>
                 <div>
                   <div className="">
                     Color :

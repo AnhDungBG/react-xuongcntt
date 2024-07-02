@@ -72,9 +72,7 @@ function ProductForm() {
           }
         }
         break;
-
       default:
-        break;
     }
 
     if (id) {
